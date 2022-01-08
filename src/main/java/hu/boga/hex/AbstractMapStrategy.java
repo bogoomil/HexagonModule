@@ -24,13 +24,14 @@ public abstract class AbstractMapStrategy {
             }
             retVal.put(row, hexAry);
         }
-
         printMap(retVal);
-
         return retVal;
     }
 
     private void printMap(Map<Integer, Hex[]> map){
+        System.out.println("---------------------------------------------------");
+        System.out.println("---  " + this.getClass());
+        System.out.println("---------------------------------------------------");
         map.values().stream().forEach(h -> {
             for(int i = 0; i < h.length; i++){
                 System.out.print(h[i] + ", ");
